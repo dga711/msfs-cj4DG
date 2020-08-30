@@ -17,11 +17,11 @@
       "package_version": "0.1.61"
     }
   ],
-  "content_type": "CORE",
-  "title": "webui devkit",
+  "content_type": "AIRCRAFT",
+  "title": "CJ4DG",
   "manufacturer": "",
   "creator": "dga711",
-  "package_version": "0.1.39",
+  "package_version": "0.1.38",
   "minimum_game_version": "1.7.12",
   "release_notes": {
     "neutral": {
@@ -29,5 +29,5 @@
       "OlderHistory": ""
     }
   },
-  "total_package_size": "0000000000000015657"
+  "total_package_size": "00000000000000415657"
 }

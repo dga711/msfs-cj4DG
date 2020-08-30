@@ -106,7 +106,8 @@ fmc-b747-8-main-display::before {
   margin-left: 4%;
   margin-bottom: 0%;
   display: block;
-  text-align: left; }
+  text-align: left;
+}
 
 #page-info {
   display: block;
@@ -118,6 +119,11 @@ fmc-b747-8-main-display::before {
 .s-text {
   font-size: 4.8vw;
   letter-spacing: 0.9vw; }
+
+#title {
+  position: absolute;
+  left: 4.5%;
+}
 
 .label {
   color: #99ceff;
