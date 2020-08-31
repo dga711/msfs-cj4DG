@@ -40,9 +40,14 @@ class CJ4_FMC_RoutePage {
             });
         };
 
-        let dstCell = "----";
+        let distCell = "----";
         if (fmc && fmc.flightPlanManager) {
-            
+            let origin = fmc.flightPlanManager.getOrigin();
+            let dest = fmc.flightPlanManager.getDestination();
+            if ((origin && origin.infos instanceof AirportInfo) && (dest && dest.infos instanceof AirportInfo)) {
+                let dist = Avionics.Utils.computeGreatCircleDistance(origin.infos.coordinates, dest.infos.coordinates);
+                distCell = String(Math.round(dist, 0));
+            }
         }
 
         let flightNoCell = "--------";
@@ -94,7 +99,7 @@ class CJ4_FMC_RoutePage {
         fmc.setTemplate([
             ["ACT FPLN", "1", pageCount.toFixed(0)],
             ["ORIGIN", "DEST", "DIST"],
-            [originCell, destinationCell,"----"],
+            [originCell, destinationCell, distCell],
             ["ROUTE", "ALTN"],
             ["----------", "----"],
             ["", "ORIG RWY"],
@@ -102,7 +107,7 @@ class CJ4_FMC_RoutePage {
             ["VIA", "TO"],
             ["-----", "-----"],
             ["----------------[color]blue", "FLT NO"],
-            ["", "--------"],
+            ["", flightNoCell],
             [""],
             ["<SEC FPLN", activateCell]
         ]);
