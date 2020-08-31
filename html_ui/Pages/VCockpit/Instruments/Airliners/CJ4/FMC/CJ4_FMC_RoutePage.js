@@ -39,12 +39,18 @@ class CJ4_FMC_RoutePage {
                 }
             });
         };
+
+        let dstCell = "----";
+        if (fmc && fmc.flightPlanManager) {
+            
+        }
+
         let flightNoCell = "--------";
         let flightNoValue = SimVar.GetSimVarValue("ATC FLIGHT NUMBER", "string");
         if (flightNoValue) {
             flightNoCell = flightNoValue;
         }
-        fmc.onRightInput[1] = () => {
+        fmc.onRightInput[4] = () => {
             let value = fmc.inOut;
             fmc.clearUserInput();
             fmc.updateFlightNo(value, (result) => {
@@ -86,20 +92,24 @@ class CJ4_FMC_RoutePage {
             };
         }
         fmc.setTemplate([
-            ["ACT FPLN[color]blue", "1", pageCount.toFixed(0)],
-            ["ORIGIN[color]blue", "DEST[color]blue", "DIST[color]blue"],
-            [originCell, destinationCell,"000"],
-            ["RUNWAY[color]blue", "FLT NO[color]blue"],
-            ["", flightNoCell],
-            ["REQUEST[color]blue", "CO ROUTE[color]blue"],
-            ["<SEND", coRouteCell],
-            ["--------------------------"],
+            ["ACT FPLN", "1", pageCount.toFixed(0)],
+            ["ORIGIN", "DEST", "DIST"],
+            [originCell, destinationCell,"----"],
+            ["ROUTE", "ALTN"],
+            ["----------", "----"],
+            ["", "ORIG RWY"],
             [""],
+            ["VIA", "TO"],
+            ["-----", "-----"],
+            ["----------------[color]blue", "FLT NO"],
+            ["", "--------"],
             [""],
-            [""],
-            [""],
-            ["<RTE 2", activateCell]
+            ["<SEC FPLN", activateCell]
         ]);
+
+        // pull title to the left
+        document.getElementById("title").classList.add("left");
+
         fmc.onRightInput[5] = () => {
             fmc.insertTemporaryFlightPlan(() => {
                 CJ4_FMC_RoutePage.ShowPage1(fmc);
