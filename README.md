@@ -4,7 +4,7 @@ A mod aiming to improve the FMC systems of the Citation CJ4 in Microsoft Flights
 
 ## Features
 
-TODO
+WIP right now with just some changes to layout and colors. Come back later for more ;)
 
 ## Roadmap
 
@@ -18,10 +18,6 @@ I don't know if I will ever get to replicate a lot of the actual FMC system (con
 
 * Download the latest zip release [here](https://github.com/dga711/msfs-webui-devkit/releases).
 * Extract the "cj4-dga711" folder to the _community_ folder in your MSFS installation
-
-## Usage
-
-TODO
 
 ## Known Limitations
 
