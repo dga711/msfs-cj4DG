@@ -55,6 +55,7 @@ class CJ4_FMC extends FMCMainDisplay {
     onInputAircraftSpecific(input) {
         console.log("CJ4_FMC.onInputAircraftSpecific input = '" + input + "'");
 
+        this.pageUpdate = undefined;
         // reset header align
         document.getElementById("title").classList.remove("left");
 

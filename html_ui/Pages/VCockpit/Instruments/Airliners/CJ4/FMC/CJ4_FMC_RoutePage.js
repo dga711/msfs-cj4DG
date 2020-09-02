@@ -112,9 +112,6 @@ class CJ4_FMC_RoutePage {
             ["<SEC FPLN", activateCell]
         ]);
 
-        // pull title to the left
-        document.getElementById("title").classList.add("left");
-
         fmc.onRightInput[5] = () => {
             fmc.insertTemporaryFlightPlan(() => {
                 CJ4_FMC_RoutePage.ShowPage1(fmc);
@@ -123,6 +120,11 @@ class CJ4_FMC_RoutePage {
         fmc.onNextPage = () => {
             CJ4_FMC_RoutePage.ShowPage2(fmc);
         };
+
+        fmc.pageUpdate = () => {
+            // pull title to the left
+            document.getElementById("title").classList.add("left");
+        }
     }
     static ShowPage2(fmc, offset = 0, pendingAirway) {
         fmc.clearDisplay();
