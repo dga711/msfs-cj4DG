@@ -52,6 +52,16 @@ class CJ4_FMC extends FMCMainDisplay {
         testel.innerHTML = "EXEC";
         testel.classList.add("blackwhite", "line-right", "fitcontent");
         this.getChildById("Electricity").append(testel);
+
+        let inoutelem = document.getElementById("in-out");
+        let brkOpen = document.createElement("span");
+        brkOpen.innerHTML = "[";
+        brkOpen.classList.add("blue", "line-left");
+        let brkClose = document.createElement("span");
+        brkClose.innerHTML = "]";
+        brkClose.classList.add("blue", "line-right");
+        inoutelem.parentElement.appendChild(brkOpen);
+        inoutelem.parentElement.appendChild(brkClose);
     }
     Update() {
         super.Update();
