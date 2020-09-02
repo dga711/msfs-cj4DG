@@ -5,7 +5,7 @@ A mod aiming to improve the FMC systems of the Citation CJ4 in Microsoft Flights
 ## Features
 
 WIP right now with just some changes to layout and colors. Come back later for more ;)  
-<img src="https://i.imgur.com/C0XIfZr.png" width="220" />
+<img src="https://i.imgur.com/z5XpgUc.png" width="220" />
 
 ## Roadmap
 
