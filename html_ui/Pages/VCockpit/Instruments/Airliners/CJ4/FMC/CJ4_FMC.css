@@ -86,7 +86,7 @@ cj4-fmc {
   height: 100%;
   background-color: #0e0d08;
   color: white;
-  font-family: "Consolas";
+  font-family: "Consolas Bold";
   font-size: 6.46vw;
   color: white;
 }
@@ -154,7 +154,7 @@ fmc-b747-8-main-display::before {
 
 #title.left {
   position: absolute;
-  left: 6.5%;
+  left: 4.5%;
 }
 
 .label {
@@ -165,14 +165,14 @@ fmc-b747-8-main-display::before {
 
 .label-left {
   position: absolute;
-  left: 7.5%;
+  left: 5.5%;
   width: 100%;
   text-align: left;
 }
 
 .label-right {
   position: absolute;
-  right: 7.5%;
+  right: 5.5%;
   width: 100%;
   text-align: right;
 }
@@ -191,14 +191,14 @@ fmc-b747-8-main-display::before {
 
 .line-left {
   position: absolute;
-  left: 4%;
+  left: 2%;
   width: 100%;
   text-align: left;
 }
 
 .line-right {
   position: absolute;
-  right: 6%;
+  right: 2%;
   width: 100%;
   text-align: right;
 }
@@ -211,5 +211,5 @@ fmc-b747-8-main-display::before {
 }
 
 #in-out {
-  padding-left: 4%;
+  padding-left: 6%;
 }

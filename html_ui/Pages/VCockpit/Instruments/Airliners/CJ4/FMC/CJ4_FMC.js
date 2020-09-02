@@ -45,6 +45,7 @@ class CJ4_FMC extends FMCMainDisplay {
                 }
             }
         };
+        
         CJ4_FMC_IdentPage.ShowPage1(this);
     }
     Update() {
