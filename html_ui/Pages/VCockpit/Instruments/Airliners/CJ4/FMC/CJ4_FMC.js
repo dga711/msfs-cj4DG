@@ -45,8 +45,13 @@ class CJ4_FMC extends FMCMainDisplay {
                 }
             }
         };
-        
+
         CJ4_FMC_IdentPage.ShowPage1(this);
+
+        let testel = document.createElement("div");
+        testel.innerHTML = "EXEC";
+        testel.classList.add("blackwhite", "line-right", "fitcontent");
+        this.getChildById("Electricity").append(testel);
     }
     Update() {
         super.Update();
@@ -56,6 +61,7 @@ class CJ4_FMC extends FMCMainDisplay {
         console.log("CJ4_FMC.onInputAircraftSpecific input = '" + input + "'");
 
         this.pageUpdate = undefined;
+        document.getElementById("page-info").classList.remove("s-text");
         // reset header align
         document.getElementById("title").classList.remove("left");
 

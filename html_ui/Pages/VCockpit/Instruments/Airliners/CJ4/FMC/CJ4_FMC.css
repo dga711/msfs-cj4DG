@@ -126,8 +126,8 @@ fmc-b747-8-main-display::before {
 }
 
 #header {
-  height: 11.5%;
-  margin-top: 4%;
+  height: 8.5%;
+  margin-top: 0%;
   margin-left: 4%;
   margin-bottom: 0%;
   display: block;
@@ -139,8 +139,13 @@ fmc-b747-8-main-display::before {
   display: block;
   text-align: right;
   position: absolute;
-  top: 5%;
-  right: 5%;
+  top: 0%;
+  right: 5.5%;
+}
+
+.blackwhite {
+  background-color: white;
+  color: #0e0d08;
 }
 
 .s-text {
@@ -212,4 +217,8 @@ fmc-b747-8-main-display::before {
 
 #in-out {
   padding-left: 6%;
+}
+
+.fitcontent{
+  width: auto;
 }
