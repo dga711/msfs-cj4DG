@@ -86,6 +86,10 @@ cj4-fmc {
   color: #1daa05;
 }
 
+.pink {
+  color: #a571ae;
+}
+
 .red {
   color: #ff886d;
 }
@@ -106,7 +110,7 @@ fmc-b747-8-main-display::before {
 
 #header {
   height: 8.5%;
-  margin-top: 0%;
+  margin-top: 4%;
   margin-left: 4%;
   margin-bottom: 0%;
   display: block;
@@ -118,7 +122,7 @@ fmc-b747-8-main-display::before {
   display: block;
   text-align: right;
   position: absolute;
-  top: 0%;
+  top: 4%;
   right: 5.5%;
 }
 
