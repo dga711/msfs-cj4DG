@@ -1,6 +1,6 @@
 # MSFS Citation CJ4 Mod
 
-A mod aiming to improve the FMC systems of the Citation CJ4 in Microsoft Flightsimulator 2020.
+A mod aiming to improve the FMC systems of the Citation CJ4 in Microsoft Flightsimulator 2020. And maybe get some (Inop.) knobs working.
 
 ## Features
 
@@ -14,6 +14,8 @@ Basically
 
 The goal is to make the MFDs more like as in the real plane. The default in MSFS is very simplified. Colors and naming is wrong in many places as well as the layout.  
 I don't know if I will ever get to replicate a lot of the actual FMC system (contributions appreciated), but at least what is there should look closer to the real thing.
+
+A stretch goal could be to also show charts on the glass display.
 
 ## Installation
 

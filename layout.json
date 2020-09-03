@@ -14,6 +14,26 @@
             "path": "html_ui/Pages/VCockpit/Instruments/Airliners/CJ4/FMC/CJ4_FMC.js",
             "size": 1547,
             "date": "132402817434110148"
+        },
+        {
+            "path": "html_ui/Fonts/B612Mono-Bold.ttf",
+            "size": 1547,
+            "date": "132402817434110148"
+        },
+        {
+            "path": "html_ui/Fonts/B612Mono-BoldItalic.ttf",
+            "size": 1547,
+            "date": "132402817434110148"
+        },
+        {
+            "path": "html_ui/Fonts/B612Mono-Italic.ttf",
+            "size": 1547,
+            "date": "132402817434110148"
+        },
+        {
+            "path": "html_ui/Fonts/B612Mono-Regular.ttf",
+            "size": 1547,
+            "date": "132402817434110148"
         }
     ]
 }

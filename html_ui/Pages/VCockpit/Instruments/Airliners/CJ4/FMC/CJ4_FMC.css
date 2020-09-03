@@ -41,40 +41,18 @@
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url("/Fonts/RobotoMono-Medium.ttf") format("truetype");
+  font-family: "B612 mono";
+  src: url("/Fonts/B612Mono-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Roboto-Light";
-  src: url("/Fonts/RobotoMono-Light.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "B612 mono";
+  src: url("/Fonts/B612Mono-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
 }
-
-@font-face {
-  font-family: "Roboto-Bold";
-  src: url("/Fonts/RobotoMono-Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Consolas";
-  src: url("/Fonts/consola.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Consolas Bold";
-  src: url("/Fonts/consolab.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 
 span:empty:before {
   content: " ";
@@ -86,8 +64,9 @@ cj4-fmc {
   height: 100%;
   background-color: #0e0d08;
   color: white;
-  font-family: "Consolas Bold";
-  font-size: 6.46vw;
+  font-family: 'B612 Mono', monospace;
+  font-weight: 700;
+  font-size: 5.66vw;
   color: white;
 }
 
@@ -159,7 +138,7 @@ fmc-b747-8-main-display::before {
 
 #title.left {
   position: absolute;
-  left: 4.5%;
+  left: 5.5%;
 }
 
 .label {
