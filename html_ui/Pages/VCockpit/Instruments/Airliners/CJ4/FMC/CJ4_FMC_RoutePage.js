@@ -1,4 +1,8 @@
 class CJ4_FMC_RoutePage {
+    constructor() {
+        this._hasChanged = false;
+    }
+
     static ShowPage1(fmc) {
         fmc.clearDisplay();
         let originCell = "□□□□";
@@ -15,7 +19,8 @@ class CJ4_FMC_RoutePage {
             let value = fmc.inOut;
             fmc.clearUserInput();
             fmc.updateRouteOrigin(value, (result) => {
-                if (result) {
+            if (result) {
+                    this._hasChanged = true;
                     CJ4_FMC_RoutePage.ShowPage1(fmc);
                 }
             });
@@ -35,6 +40,7 @@ class CJ4_FMC_RoutePage {
             fmc.clearUserInput();
             fmc.updateRouteDestination(value, (result) => {
                 if (result) {
+                    this._hasChanged = true;
                     CJ4_FMC_RoutePage.ShowPage1(fmc);
                 }
             });
@@ -68,7 +74,7 @@ class CJ4_FMC_RoutePage {
         if (fmc.coRoute) {
             coRouteCell = fmc.coRoute;
         }
-        fmc.onRightInput[2] = () => {
+        fmc.onRightInput[1] = () => {
             let value = fmc.inOut;
             fmc.clearUserInput();
             fmc.updateCoRoute(value, (result) => {
@@ -96,8 +102,12 @@ class CJ4_FMC_RoutePage {
                 CJ4_FMC_PerfInitPage.ShowPage1(fmc);
             };
         }
+
+        let actOrMod = (this._hasChanged ? "MOD" : "ACT");
+        console.log(this._hasChanged);
+
         fmc.setTemplate([
-            ["ACT FPLN", "1", pageCount.toFixed(0)],
+            [ actOrMod + ' FPLN', "1", pageCount.toFixed(0)],
             ["ORIGIN", "DEST", "DIST"],
             [originCell, destinationCell, distCell],
             ["ROUTE", "ALTN"],
