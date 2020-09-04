@@ -1,7 +1,4 @@
 class CJ4_FMC_RoutePage {
-    constructor() {
-        this._hasChanged = false;
-    }
 
     static ShowPage1(fmc) {
         fmc.clearDisplay();
@@ -19,8 +16,8 @@ class CJ4_FMC_RoutePage {
             let value = fmc.inOut;
             fmc.clearUserInput();
             fmc.updateRouteOrigin(value, (result) => {
-            if (result) {
-                    this._hasChanged = true;
+                if (result) {
+                    fmc.hasChanged = true;
                     CJ4_FMC_RoutePage.ShowPage1(fmc);
                 }
             });
@@ -40,7 +37,7 @@ class CJ4_FMC_RoutePage {
             fmc.clearUserInput();
             fmc.updateRouteDestination(value, (result) => {
                 if (result) {
-                    this._hasChanged = true;
+                    fmc.hasChanged = true;
                     CJ4_FMC_RoutePage.ShowPage1(fmc);
                 }
             });
@@ -103,11 +100,17 @@ class CJ4_FMC_RoutePage {
             };
         }
 
-        let actOrMod = (this._hasChanged ? "MOD" : "ACT");
-        console.log(this._hasChanged);
+        let actOrMod = (fmc.hasChanged ? "MOD" : "ACT");
+
+        // pull title to the left
+        document.getElementById("title").classList.add("left");
+        // make some space
+        document.querySelectorAll("div[class~='label']")[5].style.height = "30px"
+        // make footer accesible from css
+        document.getElementById("in-out").parentElement.classList.add("footer");
 
         fmc.setTemplate([
-            [ actOrMod + ' FPLN', "1", pageCount.toFixed(0)],
+            [actOrMod + ' FPLN', "1", pageCount.toFixed(0)],
             ["ORIGIN", "DEST", "DIST"],
             [originCell, destinationCell, distCell],
             ["ROUTE", "ALTN"],
@@ -300,4 +303,5 @@ class CJ4_FMC_RoutePage {
         };
     }
 }
+
 //# sourceMappingURL=CJ4_FMC_RoutePage.js.map

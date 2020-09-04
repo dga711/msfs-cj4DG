@@ -12,8 +12,24 @@ class CJ4_FMC extends FMCMainDisplay {
         this._apHasDeactivated = false;
         this._hasReachedTopOfDescent = false;
         this._apCooldown = 500;
+        this._hasChanged = false;
     }
     get templateID() { return "CJ4_FMC"; }
+    get hasChanged() { return this._hasChanged; }
+    set hasChanged(value) {
+        this._hasChanged = value;
+        if (this._hasChanged) {
+            let execEl = document.createElement("div");
+            execEl.id = "exec-sign";
+            execEl.innerHTML = "EXEC";
+            execEl.classList.add("blackwhite", "line-right", "fitcontent");
+            this.getChildById("Electricity").append(execEl);
+        } else {
+            let execEl = document.getElementById("exec-sign");
+            if (execEl) execEl.remove();
+        }
+    }
+
     connectedCallback() {
         super.connectedCallback();
         this.radioNav.init(NavMode.TWO_SLOTS);
@@ -44,14 +60,10 @@ class CJ4_FMC extends FMCMainDisplay {
                     this.refreshPageCallback();
                 }
             }
+            this.hasChanged = false;
         };
 
         CJ4_FMC_IdentPage.ShowPage1(this);
-
-        let testel = document.createElement("div");
-        testel.innerHTML = "EXEC";
-        testel.classList.add("blackwhite", "line-right", "fitcontent");
-        this.getChildById("Electricity").append(testel);
 
         let inoutelem = document.getElementById("in-out");
         let brkOpen = document.createElement("span");
