@@ -105,7 +105,7 @@ class CJ4_FMC_RoutePage {
         // pull title to the left
         document.getElementById("title").classList.add("left");
         // make some space
-        document.querySelectorAll("div[class~='label']")[5].style.height = "30px"
+        // document.querySelectorAll("div[class~='label']")[5].style.height = "30px"
         // make footer accesible from css
         document.getElementById("in-out").parentElement.classList.add("footer");
 
@@ -134,9 +134,11 @@ class CJ4_FMC_RoutePage {
             CJ4_FMC_RoutePage.ShowPage2(fmc);
         };
 
-        fmc.pageUpdate = () => {
+        fmc.refreshPageCallback = () => {
             // pull title to the left
+            console.log("fmc.pageUpdate");
             document.getElementById("title").classList.add("left");
+            CJ4_FMC_RoutePage.ShowPage1(fmc);
         }
     }
     static ShowPage2(fmc, offset = 0, pendingAirway) {
