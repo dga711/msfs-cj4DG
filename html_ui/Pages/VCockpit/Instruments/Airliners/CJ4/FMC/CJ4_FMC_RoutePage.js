@@ -106,8 +106,6 @@ class CJ4_FMC_RoutePage {
         document.getElementById("title").classList.add("left");
         // make some space
         // document.querySelectorAll("div[class~='label']")[5].style.height = "30px"
-        // make footer accesible from css
-        document.getElementById("in-out").parentElement.classList.add("footer");
 
         fmc.setTemplate([
             [actOrMod + ' FPLN', "1", pageCount.toFixed(0)],
