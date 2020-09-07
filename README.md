@@ -19,7 +19,7 @@ A stretch goal could be to also show charts on the glass display.
 
 ## Installation
 
-* Download the latest zip release [here](https://github.com/dga711/msfs-webui-devkit/releases).
+* Download or clone the repo
 * Extract the "cj4-dga711" folder to the _community_ folder in your MSFS installation
 
 ## Known Limitations
