@@ -63,7 +63,8 @@ class CJ4_FMC extends FMCMainDisplay {
             this.hasChanged = false;
         };
 
-        CJ4_FMC_IdentPage.ShowPage1(this);
+        // make footer accesible from css
+        document.getElementById("in-out").parentElement.classList.add("footer");
 
         let inoutelem = document.getElementById("in-out");
         let brkOpen = document.createElement("span");
@@ -74,6 +75,8 @@ class CJ4_FMC extends FMCMainDisplay {
         brkClose.classList.add("blue", "line-right");
         inoutelem.parentElement.appendChild(brkOpen);
         inoutelem.parentElement.appendChild(brkClose);
+
+        CJ4_FMC_IdentPage.ShowPage1(this);
     }
     Update() {
         super.Update();
