@@ -109,15 +109,15 @@ class CJ4_FMC_RoutePage {
 
         fmc.setTemplate([
             [actOrMod + ' FPLN', "1", pageCount.toFixed(0)],
-            ["ORIGIN", "DEST", "DIST"],
+            ["ORIGIN[color]blue", "DEST[color]blue", "DIST[color]blue"],
             [originCell, destinationCell, distCell],
-            ["ROUTE", "ALTN"],
+            ["ROUTE[color]blue", "ALTN[color]blue"],
             ["----------", "----"],
-            ["", "ORIG RWY"],
+            ["", "ORIG RWY[color]blue"],
             [""],
-            ["VIA", "TO"],
+            ["VIA[color]blue", "TO[color]blue"],
             ["-----", "-----"],
-            ["----------------[color]blue", "FLT NO"],
+            ["----------------[color]blue", "FLT NO[color]blue"],
             ["", flightNoCell],
             [""],
             ["<SEC FPLN", activateCell]
