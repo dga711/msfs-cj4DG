@@ -69,10 +69,10 @@ class CJ4_FMC extends FMCMainDisplay {
         let inoutelem = document.getElementById("in-out");
         let brkOpen = document.createElement("span");
         brkOpen.innerHTML = "[";
-        brkOpen.classList.add("blue", "line-left");
+        brkOpen.classList.add("blue", "line-left", "brk-left");
         let brkClose = document.createElement("span");
         brkClose.innerHTML = "]";
-        brkClose.classList.add("blue", "line-right");
+        brkClose.classList.add("blue", "line-right", "brk-right");
         inoutelem.parentElement.appendChild(brkOpen);
         inoutelem.parentElement.appendChild(brkClose);
 

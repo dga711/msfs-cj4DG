@@ -67,7 +67,6 @@ cj4-fmc {
   font-family: 'B612 Mono', monospace;
   font-weight: 700;
   font-size: 5.66vw;
-  color: white;
 }
 
 .white {
@@ -147,7 +146,6 @@ fmc-b747-8-main-display::before {
 }
 
 .label {
-  color: #99ceff;
   height: 4.4%;
   margin: 0;
 }
@@ -200,9 +198,9 @@ fmc-b747-8-main-display::before {
 }
 
 #in-out {
-  padding-left: 6%;
+  padding-left: 5.5%;
   display: inline-block;
-  margin-top:0.5%;
+  margin-top: 0.5%;
 }
 
 .footer {
@@ -212,4 +210,12 @@ fmc-b747-8-main-display::before {
 
 .fitcontent {
   width: auto;
+}
+
+.brk-left {
+  left: 1.5%;
+}
+
+.brk-right {
+  right: 1.5%;
 }

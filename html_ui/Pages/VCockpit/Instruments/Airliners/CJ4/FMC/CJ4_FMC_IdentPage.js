@@ -15,15 +15,15 @@ class CJ4_FMC_IdentPage {
         const year = String(d.getFullYear()).substring(2,4);
         fmc.setTemplate([
             ["STATUS"],
-            ["NAV DATA", ""],
+            ["NAV DATA[color]blue", ""],
             ["N4VD4T4-42", ""],
-            ["ACTIVE DATA BASE", ""],
-            ["04MAY20 11JUN20", ""],
-            ["SEC DATA BASE"],
+            ["ACTIVE DATA BASE[color]blue", ""],
+            ["04MAY20 11JUN20[color]yellow", ""],
+            ["SEC DATA BASE[color]blue"],
             ["12AUG19 21OCT19"],
-            ["UTC", "DATE"],
+            ["UTC[color]blue", "DATE[color]blue"],
             [hour + ":" + minutes, day + month + year],
-            ["PROGRAM"],
+            ["PROGRAM[color]blue"],
             ["SCID 832-0883-052", ""],
             ["----------------------"],
             ["<INDEX", "POS INIT>"]
