@@ -1,5 +1,5 @@
-> **This project is discontinued as I met another group who is doing really good things to the CJ4. Will try to contribute there instead.
-I will link it here when its public.**
+> **This project is discontinued as I met another group who is doing really good things to the CJ4. Will try to contribute there instead.  
+Visit the [fspackages repo](https://github.com/Working-Title-MSFS-Mods/fspackages).**
 
 # MSFS Citation CJ4 Mod
 
